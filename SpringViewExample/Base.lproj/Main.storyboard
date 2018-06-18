@@ -156,7 +156,6 @@ Suspendisse porttitor urna nec elit mattis, sed semper lacus pretium. Aliquam se
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uAS-KH-HCb" firstAttribute="centerY" secondItem="Eem-dI-HRc" secondAttribute="centerY" id="5rA-Nr-KlR"/>
                             <constraint firstItem="uAS-KH-HCb" firstAttribute="width" secondItem="Eem-dI-HRc" secondAttribute="width" id="Kyt-GX-dav"/>
