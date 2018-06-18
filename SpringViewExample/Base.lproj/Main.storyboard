@@ -1,24 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main" id="BYZ-38-t0r" customClass="MainViewController" customModule="SpringViewExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tzw-5D-LsH" customClass="SpringView" customModule="SpringViewExample" customModuleProvider="target">
+                                <rect key="frame" x="67" y="57" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDuration">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shrinkX">
+                                        <real key="value" value="0.94999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shrinkY">
+                                        <real key="value" value="0.94999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDE-lJ-YG9" customClass="SpringView" customModule="SpringViewExample" customModuleProvider="target">
+                                <rect key="frame" x="16" y="202" width="141" height="247"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDuration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shrinkX">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shrinkY">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3g-Ny-qWx" customClass="SpringView" customModule="SpringViewExample" customModuleProvider="target">
+                                <rect key="frame" x="16" y="493" width="326" height="132"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDuration">
+                                        <real key="value" value="0.10000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shrinkX">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shrinkY">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.71999999999999997" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a3g-Ny-qWx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="493" id="0Ba-X8-hle"/>
+                            <constraint firstItem="tzw-5D-LsH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5ef-Ja-T3f"/>
+                            <constraint firstItem="sDE-lJ-YG9" firstAttribute="top" secondItem="tzw-5D-LsH" secondAttribute="bottom" constant="17" id="D7M-ad-SfN"/>
+                            <constraint firstItem="a3g-Ny-qWx" firstAttribute="top" secondItem="sDE-lJ-YG9" secondAttribute="bottom" constant="44" id="JXz-8b-ggM"/>
+                            <constraint firstItem="sDE-lJ-YG9" firstAttribute="leading" secondItem="a3g-Ny-qWx" secondAttribute="leading" id="LQS-kU-qGX"/>
+                            <constraint firstItem="tzw-5D-LsH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="RGr-f6-7Qr"/>
+                            <constraint firstItem="sDE-lJ-YG9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="202" id="Tfj-yx-8N8"/>
+                            <constraint firstItem="sDE-lJ-YG9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="V86-Ul-PJU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a3g-Ny-qWx" secondAttribute="trailing" constant="33" id="j2b-uS-wBJ"/>
+                            <constraint firstItem="tzw-5D-LsH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="37" id="pXP-pT-k2Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sDE-lJ-YG9" secondAttribute="trailing" constant="218" id="wYo-fJ-ebl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a3g-Ny-qWx" secondAttribute="bottom" constant="42" id="zsW-e9-Lgb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
+        </scene>
+        <!--Example-->
+        <scene sceneID="XTQ-QY-uoS">
+            <objects>
+                <viewController storyboardIdentifier="example" title="Example" id="nJ2-0y-NZu" customClass="ExampleViewController" customModule="SpringViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eem-dI-HRc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.55000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="uAS-KH-HCb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec velit quam. Mauris tincidunt at leo in vulputate. Vestibulum id dui vel sapien ullamcorper varius nec eu neque. Pellentesque sed ligula condimentum, consequat felis id, ornare neque. Curabitur ullamcorper turpis ut nisl condimentum, sed sollicitudin libero tempor. Maecenas elementum ex eget quam volutpat, sed elementum mauris iaculis. Suspendisse vitae nibh gravida, ultrices justo vitae, rhoncus nulla. Donec sit amet tincidunt elit. Vivamus diam enim, ullamcorper quis ante nec, cursus ultricies arcu. Nam in magna at velit aliquam dapibus ac vitae mi. Sed justo erat, dapibus et semper sed, cursus non sapien. In sagittis nisi in facilisis aliquet.
+
+Morbi aliquet interdum ex, in lacinia libero euismod eu. Ut ut feugiat eros. Etiam ac justo dui. Phasellus ut vestibulum justo. Ut id velit ligula. Mauris dictum rutrum lacus, eget faucibus justo fermentum sit amet. Nunc pretium metus libero, quis maximus sapien sagittis ut.
+
+Morbi laoreet ex nec accumsan pellentesque. Proin ornare, nisl porttitor dictum vulputate, sem quam ullamcorper augue, eu placerat ante elit id nibh. Etiam et diam a eros luctus eleifend. Integer tristique sem et tortor ornare porta ac ac eros. Mauris eget vulputate eros. Aenean dictum, nunc sit amet pharetra lobortis, lectus sem pretium turpis, bibendum faucibus velit lacus eu est. Vestibulum vestibulum pharetra nunc ac efficitur. Sed ullamcorper, ante a tincidunt mattis, lorem libero consectetur urna, eget luctus felis augue vitae ex. Nulla consequat eros mauris, vitae scelerisque nulla imperdiet et. Quisque pellentesque sapien non nulla lacinia faucibus. Curabitur eget suscipit quam.
+
+Etiam non dolor sagittis, efficitur tortor vel, lobortis felis. Curabitur a enim fringilla, luctus turpis nec, condimentum mi. Nulla egestas pharetra eros a faucibus. Morbi porta sem vitae enim tempor luctus. In fermentum augue eu facilisis imperdiet. Etiam eu leo eros. Quisque sodales efficitur quam eu fermentum. In porttitor felis congue, finibus lorem eget, laoreet arcu. Vestibulum pretium, purus et finibus tempus, ligula felis commodo risus, ut porttitor urna velit sit amet magna. Curabitur viverra ut nulla id pulvinar. Aliquam venenatis iaculis libero, sed suscipit diam finibus sit amet. Nullam posuere non nibh vitae venenatis. Vivamus ultricies mauris ante, et auctor risus posuere in. Nam et nibh nibh. Praesent aliquet gravida rhoncus. Quisque elementum interdum tortor, eget finibus tellus cursus vel.
+
+Suspendisse porttitor urna nec elit mattis, sed semper lacus pretium. Aliquam sed elit mauris. Nulla a arcu ullamcorper, dictum purus non, elementum mauris. Proin eu blandit purus. Sed iaculis dictum nulla, et condimentum ante auctor ac. Donec tincidunt pellentesque iaculis. Suspendisse et finibus metus. Nullam ornare risus at interdum consequat. Mauris hendrerit arcu vitae ante consectetur sollicitudin ac sit amet nisl. Aenean lacinia elit vitae lorem fringilla, nec placerat augue ultrices. Praesent mi mi, facilisis ut lorem sed, fringilla accumsan leo. Suspendisse luctus non magna a rutrum. Vestibulum pretium interdum ante ac consectetur.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uAS-KH-HCb" firstAttribute="centerY" secondItem="Eem-dI-HRc" secondAttribute="centerY" id="5rA-Nr-KlR"/>
+                            <constraint firstItem="uAS-KH-HCb" firstAttribute="width" secondItem="Eem-dI-HRc" secondAttribute="width" id="Kyt-GX-dav"/>
+                            <constraint firstItem="uAS-KH-HCb" firstAttribute="centerX" secondItem="Eem-dI-HRc" secondAttribute="centerX" id="PyS-CP-Z0Q"/>
+                            <constraint firstItem="uAS-KH-HCb" firstAttribute="height" secondItem="Eem-dI-HRc" secondAttribute="height" id="cIa-ca-dTn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7sr-ep-pL4"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="uAS-KH-HCb" id="mN8-2q-S3o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P5Z-eM-H5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>

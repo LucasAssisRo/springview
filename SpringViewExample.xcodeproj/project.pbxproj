@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4197E34E20D82E3300C0EEF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4197E34D20D82E3300C0EEF6 /* AppDelegate.swift */; };
-		4197E35020D82E3300C0EEF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4197E34F20D82E3300C0EEF6 /* ViewController.swift */; };
+		4197E35020D82E3300C0EEF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4197E34F20D82E3300C0EEF6 /* MainViewController.swift */; };
 		4197E35320D82E3300C0EEF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4197E35120D82E3300C0EEF6 /* Main.storyboard */; };
 		4197E35520D82E3500C0EEF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4197E35420D82E3500C0EEF6 /* Assets.xcassets */; };
 		4197E35820D82E3500C0EEF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4197E35620D82E3500C0EEF6 /* LaunchScreen.storyboard */; };
+		4197E36E20D82F6300C0EEF6 /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4197E36C20D82F6300C0EEF6 /* SpringView.swift */; };
+		4197E36F20D82F6300C0EEF6 /* SpringViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4197E36D20D82F6300C0EEF6 /* SpringViewDelegate.swift */; };
+		4197E37120D8339500C0EEF6 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4197E37020D8339500C0EEF6 /* ExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4197E34A20D82E3300C0EEF6 /* SpringViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4197E34D20D82E3300C0EEF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4197E34F20D82E3300C0EEF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4197E34F20D82E3300C0EEF6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4197E35220D82E3300C0EEF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4197E35420D82E3500C0EEF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4197E35720D82E3500C0EEF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4197E35920D82E3500C0EEF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4197E36C20D82F6300C0EEF6 /* SpringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringView.swift; sourceTree = "<group>"; };
+		4197E36D20D82F6300C0EEF6 /* SpringViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringViewDelegate.swift; sourceTree = "<group>"; };
+		4197E37020D8339500C0EEF6 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,25 @@
 		4197E34C20D82E3300C0EEF6 /* SpringViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				4197E36B20D82F6300C0EEF6 /* SpringView */,
 				4197E34D20D82E3300C0EEF6 /* AppDelegate.swift */,
-				4197E34F20D82E3300C0EEF6 /* ViewController.swift */,
+				4197E37020D8339500C0EEF6 /* ExampleViewController.swift */,
+				4197E34F20D82E3300C0EEF6 /* MainViewController.swift */,
 				4197E35120D82E3300C0EEF6 /* Main.storyboard */,
 				4197E35420D82E3500C0EEF6 /* Assets.xcassets */,
 				4197E35620D82E3500C0EEF6 /* LaunchScreen.storyboard */,
 				4197E35920D82E3500C0EEF6 /* Info.plist */,
 			);
 			path = SpringViewExample;
+			sourceTree = "<group>";
+		};
+		4197E36B20D82F6300C0EEF6 /* SpringView */ = {
+			isa = PBXGroup;
+			children = (
+				4197E36C20D82F6300C0EEF6 /* SpringView.swift */,
+				4197E36D20D82F6300C0EEF6 /* SpringViewDelegate.swift */,
+			);
+			path = SpringView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4197E35020D82E3300C0EEF6 /* ViewController.swift in Sources */,
+				4197E36F20D82F6300C0EEF6 /* SpringViewDelegate.swift in Sources */,
+				4197E35020D82E3300C0EEF6 /* MainViewController.swift in Sources */,
 				4197E34E20D82E3300C0EEF6 /* AppDelegate.swift in Sources */,
+				4197E36E20D82F6300C0EEF6 /* SpringView.swift in Sources */,
+				4197E37120D8339500C0EEF6 /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
