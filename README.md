@@ -4,4 +4,4 @@
 
 UIView subclass with associated spring animations.
 
-<img src="https://cdn.rawgit.com/LucasAssisRo/springview/02ab78ec/resources/out.gif"/>
+![gif example](https://cdn.rawgit.com/LucasAssisRo/springview/02ab78ec/resources/out.gif)
