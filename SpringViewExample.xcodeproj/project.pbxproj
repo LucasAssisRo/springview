@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4196BBD020D83C87003B0076 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4196BBCE20D83C87003B0076 /* README.md */; };
+		4196BBD120D83C87003B0076 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4196BBCF20D83C87003B0076 /* LICENSE */; };
 		4197E34E20D82E3300C0EEF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4197E34D20D82E3300C0EEF6 /* AppDelegate.swift */; };
 		4197E35020D82E3300C0EEF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4197E34F20D82E3300C0EEF6 /* MainViewController.swift */; };
 		4197E35320D82E3300C0EEF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4197E35120D82E3300C0EEF6 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4196BBCE20D83C87003B0076 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		4196BBCF20D83C87003B0076 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		4197E34A20D82E3300C0EEF6 /* SpringViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4197E34D20D82E3300C0EEF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4197E34F20D82E3300C0EEF6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				4197E35420D82E3500C0EEF6 /* Assets.xcassets */,
 				4197E35620D82E3500C0EEF6 /* LaunchScreen.storyboard */,
 				4197E35920D82E3500C0EEF6 /* Info.plist */,
+				4196BBCF20D83C87003B0076 /* LICENSE */,
+				4196BBCE20D83C87003B0076 /* README.md */,
 			);
 			path = SpringViewExample;
 			sourceTree = "<group>";
@@ -141,7 +147,9 @@
 			files = (
 				4197E35820D82E3500C0EEF6 /* LaunchScreen.storyboard in Resources */,
 				4197E35520D82E3500C0EEF6 /* Assets.xcassets in Resources */,
+				4196BBD020D83C87003B0076 /* README.md in Resources */,
 				4197E35320D82E3300C0EEF6 /* Main.storyboard in Resources */,
+				4196BBD120D83C87003B0076 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
