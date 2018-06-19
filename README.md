@@ -18,11 +18,11 @@ Just download the springview folder and add it to your project
 
   3- Add contraints to your spring views **(the animations will not work without contraints)**.
 
-  4- On the master view controller call ```springView.embed(viewController: embededViewController, in: self, delegate: embededViewController)```
+  4- On the master view controller call ```swift springView.embed(viewController: embededViewController, in: self, delegate: embededViewController)```
   
-  5- If you want to handle the spring view events on the master view controller also add notification observers to the notifications  ```.springExpand``` and ```.springColapse``` like so:
+  5- If you want to handle the spring view events on the master view controller also add notification observers to the notifications  ```swift .springExpand``` and ```swift .springColapse``` like so:
   
-      ```
+      ```swift
        NotificationCenter.default.addObserver(self,
                                               selector: #selector(expandSpring(_:)),
                                               name: NSNotification.Name.springExpand,
