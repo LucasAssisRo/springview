@@ -5,3 +5,31 @@
 UIView subclass with associated spring animations.
 
 ![gif example](https://cdn.rawgit.com/LucasAssisRo/springview/02ab78ec/resources/out.gif)
+
+
+## **INSTALL**
+Just download the springview folder and add it to your project
+
+## **HOW TO USE**
+
+  1- Create the view controller to be embedded on the spring view.
+
+  2- Implement the SpringViewDelegate on the embedded view controller to handle the expand and colapse events.
+
+  3- Add contraints to your spring views **(the animations will not work without contraints)**.
+
+  4- On the master view controller call ```springView.embed(viewController: embededViewController, in: self, delegate: embededViewController)```
+  
+  5- If you want to handle the spring view events on the master view controller also add notification observers to the notifications  ```.springExpand``` and ```.springColapse``` like so:
+  
+      ```
+       NotificationCenter.default.addObserver(self,
+                                              selector: #selector(expandSpring(_:)),
+                                              name: NSNotification.Name.springExpand,
+                                              object: nil)
+                                         
+       NotificationCenter.default.addObserver(self,
+                                              selector: #selector(colapseSpring(_:)),
+                                              name: NSNotification.Name.springColapse,
+                                              object: nil)
+      ```
