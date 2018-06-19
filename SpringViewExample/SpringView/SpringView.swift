@@ -13,7 +13,7 @@ class SpringView: UIView {
     var delegate: SpringViewDelegate?
     
     private var shrink = CGAffineTransform(scaleX: 1, y: 1)
-    var smallFrame: CGRect!
+    private var smallFrame: CGRect!
     
     var closeButton: UIButton!
     private let closeButtonRadius: CGFloat = 20
@@ -22,8 +22,8 @@ class SpringView: UIView {
                        y: self.bounds.minY + self.closeButtonRadius + 44)
     }
     
-    var containerView: UIView!
-    var embededViewController: UIViewController?
+    private var containerView: UIView!
+    private var embededViewController: UIViewController?
     
     private let roundCornerAnimation = CABasicAnimation(keyPath: "cornerRadius")
     private let sharpCornerAnimation = CABasicAnimation(keyPath: "cornerRadius")
@@ -31,7 +31,7 @@ class SpringView: UIView {
     private var subviewColapsedCenters: [CGPoint] = []
     private var subviewExpandedCenters: [CGPoint] = []
     
-    var isPresenting = false
+    private var isPresenting = false
     
     @IBInspectable var animationDuration: CGFloat = 0
     
@@ -157,6 +157,14 @@ class SpringView: UIView {
         }
     }
     
+    /**
+     Embed the reusable view controller into the spring view
+     - parameters:
+        - viewController: The view controller beeing embedded.
+        - parent: The view controller where the spring view is nested.
+        - delegate: Repeat the viewController(embedded view controller) here.
+    */
+    
     func embed(viewController: UIViewController, in parent: UIViewController, delegate: SpringViewDelegate) {
         parent.addChildViewController(viewController)
         self.containerView.addSubview(viewController.view)
@@ -167,7 +175,7 @@ class SpringView: UIView {
         self.embededViewController = viewController
     }
     
-    @objc func expandView(in superview: UIView, animated: Bool = true) {
+    @objc private func expandView(in superview: UIView, animated: Bool = true) {
         print("spring view expand")
         self.bringSubview(toFront: self.closeButton)
         NotificationCenter.default.post(name: .springExpand, object: self, userInfo: [
@@ -209,7 +217,7 @@ class SpringView: UIView {
     }
     
     
-    @objc func colapseView(_ sender: Any, animated: Bool = true) {
+    @objc private func colapseView(_ sender: Any, animated: Bool = true) {
         print("spring view colapse")
         NotificationCenter.default.post(name: .springColapse, object: self, userInfo: [
             "animated" : animated,
@@ -256,7 +264,7 @@ class SpringView: UIView {
         }
     }
     
-    func indexSubviews(_ superview: UIView) {
+    private func indexSubviews(_ superview: UIView) {
         self.subviewColapsedCenters.removeAll()
         self.subviewExpandedCenters.removeAll()
         for view in self.subviews {
@@ -266,7 +274,7 @@ class SpringView: UIView {
         }
     }
     
-    enum Tag: Int {
+    private enum Tag: Int {
         case unspecified = 0
         case closeButton = 1000
         case containerView = 2000
