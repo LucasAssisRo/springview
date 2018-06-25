@@ -35,3 +35,6 @@ NotificationCenter.default.addObserver(self,
                                        name: NSNotification.Name.springColapse,
                                        object: nil)
 ```
+
+
+Disclaimer: This is not a comprehensive project. I made this under the specifications for my personal projects you might need to change the resizing logic for your projects.
